@@ -140,8 +140,12 @@ async function run (parameters:any){
     core.info(scanCommandOutput)
 
     //store output files as artifacts
-    const artifact = require('@actions/artifact');
-    const artifactClient = artifact.create()
+    // const artifact = require('@actions/artifact');
+    // const artifactClient = artifact.create()
+
+    const {DefaultArtifactClient} = require('@actions/artifact')
+    const artifactClient = new DefaultArtifactClient()
+
     const artifactName = 'Veracode Pipeline-Scan Results';
     const files = [
         'results.json',
