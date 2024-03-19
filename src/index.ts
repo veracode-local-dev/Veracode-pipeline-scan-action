@@ -1,6 +1,6 @@
 import { readFileSync, existsSync} from 'fs';
 import * as core from '@actions/core'
-import {create, UploadOptions} from '@actions/artifact'
+// import {create, UploadOptions} from '@actions/artifact'
 import { downloadJar } from "./pipeline-scan";
 import { runScan } from "./pipeline-scan";
 import { checkParameters } from './check-parameters';
